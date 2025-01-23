@@ -1,0 +1,252 @@
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Верхняя панель */
+#header {
+    background-color: #333; /* Чёрный цвет */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Левая часть заголовка */
+.header-title {
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+
+/* Правая часть панели */
+#header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Расстояние между элементами */
+}
+
+/* Контейнер для баланса */
+.currency {
+    display: flex;
+    align-items: center;
+    background-color: #444; /* Тёмно-серый фон */
+    padding: 5px 15px;
+    border-radius: 20px; /* Закруглённые края */
+    color: white; /* Белый текст */
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Тень */
+}
+
+/* Иконка монеты */
+#luma-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px; /* Расстояние между иконкой и текстом */
+}
+
+/* Текст баланса */
+#balance {
+    font-size: 16px;
+    color: white;
+}
+
+/* Иконка профиля */
+#profile-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background-color: #444; /* Тёмно-серый фон */
+    border-radius: 20px; /* Круглая форма */
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Тень */
+}
+
+h1, h2 {
+    margin: 0;
+    text-align: center;
+    color: #333;
+    margin-top: 50px;
+}
+
+/* Основной контент */
+main {
+    padding: 20px;
+    padding-bottom: 70px; /* Чтобы нижняя панель не перекрывала контент */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Магазин */
+.shop-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shop-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Увеличенная тень при наведении */
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Стили нижней панели навигации */
+#bottom-nav {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.tab-button.active {
+    color: yellow;
+}
+
+.tab-button img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 5px;
+}
+
+.tab-button span {
+    font-size: 0.8rem;
+}
+
+.tab-button:hover {
+    color: lightgray;
+}
+
+#bottom-nav button {
+    flex: 1;
+    background: none;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#bottom-nav button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+#bottom-nav button:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.1); /* Лёгкий прозрачный фон при наведении */
+}
+
+/* Анимация доставки */
+#delivery-animation {
+    position: relative;
+    height: 200px;
+    background: #e6e6e6;
+    border-radius: 10px;
+}
+
+#character {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 24px;
+}
+
+#delivery-box {
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+    font-size: 24px;
+}
+
+/* Основной контейнер игры */
+#game-container {
+    width: 100%;
+    height: 100vh;
+    background-color: #f0f0f0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Панель статистики */
+#stats {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+/* Карта игры */
+#map {
+    width: 100%;
+    height: 100%;
+    background: url('image/yandex.png') center/cover no-repeat;
+    position: relative;
+}
+
+/* Персонаж (игрок) */
+#player {
+    width: 50px;
+    height: 50px;
+    background: red;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    border-radius: 50%;
+}
+
+/* Контейнер баланса */
+#balance-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
