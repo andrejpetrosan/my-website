@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Game</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Верхняя панель -->
+    <header id="header">
+        <div id="header-text" class="header-title">Магазин</div>
+        <div id="header-right">
+            <!-- Контейнер для баланса -->
+            <div class="currency">
+                <img id="luma-icon" src="./image/luma-icon.png" alt="LUMA иконка" width="24" height="24" />
+                <span id="balance">100 LUMA</span>
+            </div>
+            <!-- Иконка профиля -->
+            <div id="profile-icon">
+                <img src="./image/profile-icon.png" alt="Иконка профиля" width="24" height="24" />
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <section id="deliveries" class="hidden">
+            <h1>Доставки</h1>
+            <p>Здесь будет информация о доставках.</p>
+        </section>
+        <section id="repair" class="hidden">
+            <h2>Ремонт</h2>
+            <p>Здесь будет информация о ремонте транспорта.</p>
+        </section>
+        <section id="shop">
+            <h2>Магазин</h2>
+            <div class="shop-item">
+                <p>Транспорт 1 (Подарок)</p>
+                <button>Получить бесплатно</button>
+            </div>
+            <div class="shop-item">
+                <p>Транспорт 2</p>
+                <button>Купить</button>
+            </div>
+        </section>
+        <section id="exchange" class="hidden">
+            <h2>Биржа</h2>
+            <p>Курс монеты: 1 LUMA = 1 USDT</p>
+            <div id="chart">Здесь будет график монеты.</div>
+        </section>
+        <section id="play" class="hidden">
+            <h2>Играть</h2>
+            <div id="game-container" class="hidden">
+                <div id="map">
+                    <div id="player"></div>
+                </div>
+            </div>
+            <button id="playButton">Начать игру</button>
+        </section>
+    </main>
+
+    <!-- Нижняя панель навигации -->
+<nav id="bottom-nav">
+    <button data-section="deliveries" class="tab-button">
+        <img src="./image/deliveries.png" alt="Доставки">
+        <span>Доставки</span>
+    </button>
+    <button data-section="shop" class="tab-button active">
+        <img src="./image/shop.png" alt="Магазин">
+        <span>Магазин</span>
+    </button>
+    <button data-section="exchange" class="tab-button">
+        <img src="./image/exchange.png" alt="Биржа">
+        <span>Биржа</span>
+    </button>
+    <button data-section="play" class="tab-button">
+        <img src="./image/play.png" alt="Играть">
+        <span>Играть</span>
+    </button>
+</nav>
+
+
+    <!-- Подключение скрипта -->
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+
