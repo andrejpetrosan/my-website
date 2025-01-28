@@ -25,14 +25,19 @@
 
     <!-- Основной контент -->
     <main>
+        <!-- Доставки -->
         <section id="deliveries" class="hidden">
             <h1>Доставки</h1>
             <p>Здесь будет информация о доставках.</p>
         </section>
+
+        <!-- Ремонт -->
         <section id="repair" class="hidden">
             <h2>Ремонт</h2>
             <p>Здесь будет информация о ремонте транспорта.</p>
         </section>
+
+        <!-- Магазин -->
         <section id="shop">
             <h2>Магазин</h2>
             <div class="shop-item">
@@ -44,11 +49,29 @@
                 <button>Купить</button>
             </div>
         </section>
-        <section id="exchange" class="hidden">
-            <h2>Биржа</h2>
-            <p>Курс монеты: 1 LUMA = 1 USDT</p>
-            <div id="chart">Здесь будет график монеты.</div>
-        </section>
+
+        <!-- Биржа -->
+        <section id="exchange">
+    <div class="exchange-header">
+        <div class="rate-container">
+            <p class="rate-title"><strong>Текущий курс:</strong></p>
+            <div class="rate-content">
+                <img class="rate-icon" src="./image/luma-icon.png" alt=" " />
+                <p class="rate-text"><strong>1 LUMA = 1.0000 USDT</strong></p>
+            </div>
+        </div>
+    </div>
+    <div id="time-periods">
+        <button class="period-btn active" data-period="1d">1 день</button>
+        <button class="period-btn" data-period="1w">1 нед.</button>
+        <button class="period-btn" data-period="1m">1 мес.</button>
+        <button class="period-btn" data-period="1y">1 год</button>
+    </div>
+<canvas id="exchange-chart" width="400" height="200"></canvas>
+</section>
+
+
+        <!-- Играть -->
         <section id="play" class="hidden">
             <h2>Играть</h2>
             <div id="game-container" class="hidden">
@@ -61,28 +84,29 @@
     </main>
 
     <!-- Нижняя панель навигации -->
-<nav id="bottom-nav">
-    <button data-section="deliveries" class="tab-button">
-        <img src="./image/deliveries.png" alt="Доставки">
-        <span>Доставки</span>
-    </button>
-    <button data-section="shop" class="tab-button active">
-        <img src="./image/shop.png" alt="Магазин">
-        <span>Магазин</span>
-    </button>
-    <button data-section="exchange" class="tab-button">
-        <img src="./image/exchange.png" alt="Биржа">
-        <span>Биржа</span>
-    </button>
-    <button data-section="play" class="tab-button">
-        <img src="./image/play.png" alt="Играть">
-        <span>Играть</span>
-    </button>
-</nav>
-
+    <nav id="bottom-nav">
+        <button data-section="deliveries" class="tab-button">
+            <img src="./image/deliveries.png" alt="Доставки">
+            <span>Доставки</span>
+        </button>
+        <button data-section="shop" class="tab-button active">
+            <img src="./image/shop.png" alt="Магазин">
+            <span>Магазин</span>
+        </button>
+        <button data-section="exchange" class="tab-button">
+            <img src="./image/exchange.png" alt="Биржа">
+            <span>Биржа</span>
+        </button>
+        <button data-section="play" class="tab-button">
+            <img src="./image/play.png" alt="Играть">
+            <span>Играть</span>
+        </button>
+    </nav>
 
     <!-- Подключение скрипта -->
     <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </body>
 </html>
 
