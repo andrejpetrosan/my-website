@@ -2,13 +2,13 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #222222; /* Чёрный цвет */
     color: #333;
 }
 
 /* Верхняя панель */
 #header {
-    background-color: #333; /* Чёрный цвет */
+    background-color: #222222; /* Чёрный цвет */
     color: white;
     padding: 10px 20px;
     display: flex;
@@ -73,7 +73,7 @@ body {
 h1, h2 {
     margin: 0;
     text-align: center;
-    color: #333;
+    color: cadetblue;
     margin-top: 50px;
 }
 
@@ -122,7 +122,7 @@ button:hover {
 
 /* Стили нижней панели навигации */
 #bottom-nav {
-    background-color: #333;
+    background-color: cadetblue;
     color: white;
     display: flex;
     justify-content: space-around;
@@ -258,6 +258,155 @@ main {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+
+
+#current-rate {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#time-periods {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.period-btn {
+    padding: 100px 200px;
+    background-color: white;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.period-btn:hover {
+    background-color: #0056b3;
+}
+
+.period-btn.active {
+    background-color: yellow;
+    color: black;
+}
+
+canvas {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#chart {
+    display: block;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+}
+
+/* Контейнер курса */
+.rate-container {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение */
+    align-items: flex-start; /* Выравнивание по левому краю */
+    justify-content: flex-start; /* Выравнивание по левому краю */
+    background-color: #333333; /* Темный фон */
+    padding: 15px 20px;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Тень */
+    margin-bottom: 20px;
+
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+.rate-container p:first-child {
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px; /* Регулирует отступ снизу */
+    margin-left: 8px; /* Регулирует отступ слева */
+    margin-top: 0; /* Регулирует отступ сверху */
+}
+
+/* Заголовок курса */
+.rate-title {
+    font-size: 18px;
+    margin-bottom: 10px; /* Отступ между заголовком и контентом */
+    color: white;
+}
+
+/* Контейнер для иконки и текста */
+.rate-content {
+    display: flex;
+    align-items: center; /* Иконка и текст на одном уровне */
+    justify-content: flex-start; /* Выравнивание по левому краю */
+    gap: 10px; /* Расстояние между иконкой и текстом */
+    width: 100%; /* Занимает всю ширину контейнера */
+}
+
+/* Иконка валюты */
+.rate-icon {
+    width: 35px;
+    height: 35px;
+}
+
+/* Текст курса */
+.rate-text {
+    font-size: 18px;
+    line-height: 1.4;
+    color: white;
+    font-weight: bold;
+}
+
+.rate-text strong {
+    font-size: 18px;
+    color: white; /* белого цвета  */
+}
+
+/* Контейнер для кнопок периодов */
+#time-periods {
+    display: flex;
+    justify-content: space-evenly; /* Равномерное распределение кнопок */
+    margin-bottom: 20px;
+    padding: 10px 0; /* Добавляем отступ сверху и снизу */
+}
+
+/* Общие стили для кнопок */
+.period-btn {
+    padding: 8px 20px; /* Внутренние отступы */
+    background-color: #333; /* Тёмный фон */
+    color: #fff; /* Белый текст */
+    border: 1px solid #444; /* Тёмная рамка */
+    border-radius: 20px; /* Полностью закругленные края */
+    cursor: pointer; /* Курсор в виде руки */
+    font-size: 14px; /* Размер текста */
+    font-weight: bold; /* Жирный текст */
+    transition: background-color 0.3s, color 0.3s, transform 0.2s ease-in-out;
+}
+
+/* Эффект при наведении */
+.period-btn:hover {
+    background-color: #444; /* Тёмно-серый фон */
+    color: #ffd700; /* Золотистый текст */
+    transform: scale(1.05); /* Легкое увеличение */
+}
+
+/* Активная кнопка */
+.period-btn.active {
+    background-color: #ffd700; /* Золотистый фон */
+    color: #333; /* Тёмный текст */
+    border: 1px solid #ffd700; /* Рамка цвета фона */
+}
+
+#exchange-chart {
+    margin: 20px auto;
+    max-width: 100%;
+    background-color: #333; /* Темный фон для графика */
+    border-radius: 10px;
+    padding: 10px;
 }
 
 
